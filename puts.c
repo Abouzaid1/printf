@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * __putstr - print a string
+ * puts - print a string
  * @s: str input
  * Return: number of bytes
  */

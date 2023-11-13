@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * __putchr - print a char
+ * putchr - print a char
  * @c: char input
  * Return: 1
  */
