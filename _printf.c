@@ -10,7 +10,7 @@ int _printf(const char *format, ...) {
 
     while (*format) {
         if (*format == '%') {
-            format++;  // Move past '%'
+            format++;  
             switch (*format) {
                 case 'c':
                     _putchar(va_arg(args, int));
@@ -24,7 +24,7 @@ int _printf(const char *format, ...) {
                     count++;
                     break;
                 default:
-                    // Handle unsupported specifier
+                    
                     _putchar('%');
                     _putchar(*format);
                     count += 2;
