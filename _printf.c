@@ -10,18 +10,18 @@ int _printf(const char *format, ...) {
 
     while (*format) {
         if (*format == '%') {
-            format++;  
+            format+=1;  
             switch (*format) {
                 case 'c':
                     _putchar(va_arg(args, int));
-                    count++;
+                    count+=1;
                     break;
                 case 's':
                     count += printf("%s", va_arg(args, char *));
                     break;
                 case '%':
                     _putchar('%');
-                    count++;
+                    count+=1;
                     break;
                 default:
                     
@@ -32,7 +32,7 @@ int _printf(const char *format, ...) {
             }
         } else {
             _putchar(*format);
-            count++;
+            count+=1;
         }
         format++;
     }
