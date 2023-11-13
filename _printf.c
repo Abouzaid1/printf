@@ -21,22 +21,22 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] != '%')
 		{
-			putchar(format[i]);
+			_putchar(format[i]);
 		}
 		else if (format[i + 1] == 'c')
 		{
-			putchar(va_arg(args, int));
+			_putchar(va_arg(args, int));
 			i++;
 		}
 		else if (format[i + 1] == 's')
 		{
-			s_count = puts(va_arg(args, char *));
+			s_count = _puts(va_arg(args, char *));
 			i++;
 			count += (s_count - 1);
 		}
 		else if (format[i+1] == '%')
 		{
-			putchar('%');
+			_putchar('%');
 			i++;
 		}
 		count += 1;

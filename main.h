@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 int _printf(const char *format, ...);
-int putchar(char c);
-int puts(char *c);
+int _putchar(char c);
+int _puts(char *c);
 
 #endif
