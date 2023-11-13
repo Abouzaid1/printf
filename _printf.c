@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _printf - print to formatted text
+ * _printf - print to stdout formatted text
  *
  * @format: formate specifier
  * Return: number of bytes printed
