@@ -4,7 +4,7 @@
  * @c: char input
  * Return: 1
  */
-int __putchr(char c)
+int putchar(char c)
 {
 	return (write(1, &c, 1));
 }
