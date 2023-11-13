@@ -7,31 +7,31 @@ int _printf(const char *format, ...) {
 
     va_list args;
     va_start(args, format);
-	
+
     while (*format) {
         if (*format == '%') {
             format+=1;  
             switch (*format) {
                 case 'c':
-                    _putchar(va_arg(args, int));
+                    putchar(va_arg(args, int));
                     count+=1;
                     break;
                 case 's':
                     count += printf("%s", va_arg(args, char *));
                     break;
                 case '%':
-                    _putchar('%');
+                    putchar('%');
                     count+=1;
                     break;
                 default:
                     
-                    _putchar('%');
-                    _putchar(*format);
+                    putchar('%');
+                    putchar(*format);
                     count += 2;
                     break;
             }
         } else {
-            _putchar(*format);
+            putchar(*format);
             count+=1;
         }
         format++;
